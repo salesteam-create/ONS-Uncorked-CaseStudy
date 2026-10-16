@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ONS+ UnCorked Case Study | Kilowott</title>
+<meta name="description" content="How Kilowott built the brand, website, event materials and LinkedIn presence for ONS+ UnCorked, the showcase and networking pavilion at ONS 2026 in Stavanger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#5D23BC;
+  --purple-deep:#2B1056;
+  --ink:#120a24;
+  --lime:#C6FE33;
+  --white:#ffffff;
+  --paper:#F5F5F5;
+  --text:#232323;
+  --muted:rgba(35,35,35,.68);
+  --on-dark-muted:rgba(255,255,255,.74);
+  --line:rgba(35,35,35,.14);
+  --max:1180px;
+  --gutter:clamp(16px,5vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'Space Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.05;letter-spacing:-.01em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-weight:500;font-size:15px;letter-spacing:.02em;color:var(--purple);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.eyebrow::after{content:"";flex:1;height:1px;background:currentColor;opacity:.35}
+.dark .eyebrow{color:var(--lime)}
+section{padding:clamp(64px,10vw,120px) 0}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:rgba(18,10,36,.82);backdrop-filter:blur(8px);color:var(--white)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.top img{height:30px;width:auto}
+.top nav{display:flex;gap:24px;font-size:14px;font-weight:500}
+.top nav a{text-decoration:none;opacity:.85}
+.top nav a:hover{opacity:1;color:var(--lime)}
+.draft{font-size:12px;font-weight:700;color:var(--ink);background:var(--lime);padding:4px 10px;border-radius:99px;white-space:nowrap}
+@media (max-width:820px){.top nav{display:none}}
+
+/* Hero */
+.hero{background:linear-gradient(160deg,var(--ink) 15%,var(--purple) 100%);color:var(--white);position:relative;overflow:hidden;padding:clamp(72px,12vw,140px) 0 clamp(64px,9vw,110px)}
+.sparkles{position:absolute;left:0;right:0;top:0;height:200px;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23C6FE33'/%3E%3Cg fill='%23120a24'%3E%3Ccircle cx='0' cy='0' r='50'/%3E%3Ccircle cx='100' cy='0' r='50'/%3E%3Ccircle cx='0' cy='100' r='50'/%3E%3Ccircle cx='100' cy='100' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:100px 100px;
+  -webkit-mask-image:linear-gradient(#000 20%,transparent);mask-image:linear-gradient(#000 20%,transparent)}
+.hero .wrap{position:relative}
+.hero-logo{width:min(520px,82vw);margin:56px 0 28px}
+.hero h1{font-size:clamp(40px,7vw,84px);font-weight:800;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p.lede{font-size:clamp(18px,2.2vw,22px);color:var(--on-dark-muted);max-width:56ch;margin-top:24px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);margin-top:56px}
+.facts div{background:rgba(18,10,36,.55);padding:18px 20px}
+.facts dt{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--lime);font-weight:700}
+.facts dd{font-size:15px;margin-top:4px}
+
+/* Text blocks */
+.split{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+h2{font-size:clamp(34px,5vw,56px);font-weight:800}
+h2 .hl{color:var(--purple)}
+.dark h2 .hl{color:var(--lime)}
+.prose p{color:var(--muted);margin-bottom:18px}
+.prose p strong{color:var(--text)}
+.dark .prose p{color:var(--on-dark-muted)}
+.dark .prose p strong{color:var(--white)}
+.checks{list-style:none;display:grid;gap:10px;margin-top:8px}
+.checks li{background:rgba(93,35,188,.08);padding:12px 16px 12px 44px;position:relative;font-size:15px}
+.checks li::before{content:"";position:absolute;left:16px;top:17px;width:14px;height:14px;background:var(--purple);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+
+.dark{background:var(--ink);color:var(--white)}
+.purple{background:linear-gradient(140deg,var(--purple) 20%,var(--purple-deep) 95%);color:var(--white)}
+.grey{background:var(--paper)}
+
+/* Pull quote */
+.pull{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.6vw,40px);line-height:1.15;max-width:22ch}
+.pull span{color:var(--lime)}
+
+/* Steps */
+.chapter{display:flex;align-items:baseline;gap:16px;margin-bottom:28px}
+.chapter .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:18px;color:var(--ink);background:var(--lime);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;flex:none}
+
+/* Palette */
+.palette{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
+@media (max-width:600px){.palette{grid-template-columns:repeat(2,1fr)}}
+.swatch{aspect-ratio:1/1.1;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;font-size:13px;border:1px solid var(--line)}
+.swatch b{font-size:15px}
+.type{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+@media (max-width:600px){.type{grid-template-columns:1fr}}
+.type div{border:1px solid var(--line);padding:22px}
+.type .big{font-size:56px;line-height:1;display:block;margin:8px 0}
+.type small{color:var(--muted);font-size:13px}
+
+/* Media slots */
+.slot{border:1.5px dashed rgba(93,35,188,.45);background:repeating-linear-gradient(-45deg,rgba(93,35,188,.04) 0 12px,transparent 12px 24px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--purple);font-size:14px;font-weight:500;min-height:220px}
+.dark .slot,.purple .slot{border-color:rgba(198,254,51,.45);color:var(--lime);background:repeating-linear-gradient(-45deg,rgba(198,254,51,.05) 0 12px,transparent 12px 24px)}
+.slot small{display:block;opacity:.75;font-weight:400;margin-top:4px}
+.slot.tall{aspect-ratio:3/4;min-height:0}
+.slot.wide{aspect-ratio:16/9;min-height:0}
+.slot.page{aspect-ratio:1440/2200;min-height:0}
+
+/* Site structure list */
+.structure{counter-reset:s;list-style:none;border-top:1px solid var(--line)}
+.structure li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.structure li::before{content:counter(s,decimal-leading-zero);font-weight:700;color:var(--purple)}
+.structure b{display:block}
+.structure span{color:var(--muted);font-size:15px}
+
+/* Asset grid */
+.assets{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:40px}
+.asset{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column}
+.asset .media{aspect-ratio:4/3;overflow:hidden;background:var(--purple-deep)}
+.asset .media img{width:100%;height:100%;object-fit:cover;object-position:top}
+.asset .media .slot{height:100%;min-height:0;border:0}
+.asset .cap{padding:16px 18px 20px}
+.asset h3{font-size:20px;font-weight:700;margin-bottom:6px}
+.asset p{font-size:14.5px;color:var(--on-dark-muted);line-height:1.5}
+
+.badges{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:520px}
+.badges img{box-shadow:0 24px 48px rgba(0,0,0,.35)}
+
+/* LinkedIn */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:40px}
+.card{background:var(--white);border:1px solid var(--line);padding:24px}
+.card h3{font-size:20px;font-weight:700;margin-bottom:8px}
+.card p{font-size:15px;color:var(--muted)}
+
+/* Timeline */
+.timeline{list-style:none;position:relative;margin-top:40px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:rgba(198,254,51,.35)}
+.timeline li{position:relative;padding:0 0 26px 40px}
+.timeline li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;background:var(--lime);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+.timeline time{font-weight:700;color:var(--lime);display:block;font-size:14px;letter-spacing:.03em}
+.timeline span{color:var(--on-dark-muted)}
+
+/* Results */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.stat{background:var(--white);padding:28px 24px}
+.stat b{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(40px,5vw,60px);line-height:1;color:var(--purple);display:block}
+.stat b.tbc{color:rgba(93,35,188,.35)}
+.stat span{display:block;margin-top:10px;font-size:15px;color:var(--muted)}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+
+/* Quote & CTA */
+blockquote{font-family:'Bricolage Grotesque';font-weight:600;font-size:clamp(24px,3.2vw,36px);line-height:1.25;max-width:30ch}
+blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;margin-top:20px;color:var(--on-dark-muted)}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--ink);font-weight:700;text-decoration:none;padding:16px 24px;margin-top:32px}
+.cta:hover{background:var(--white)}
+.foot{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:24px 0}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <img src="assets/uncorked-logo.png" alt="UnCorked">
+    <nav>
+      <a href="#challenge">Challenge</a>
+      <a href="#brand">Brand</a>
+      <a href="#website">Website</a>
+      <a href="#onsite">On-site</a>
+      <a href="#linkedin">LinkedIn</a>
+      <a href="#results">Results</a>
+    </nav>
+    <span class="draft">Draft for review</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="sparkles" aria-hidden="true"></div>
+  <div class="wrap">
+    <img class="hero-logo" src="assets/uncorked-logo.png" alt="UnCorked logo">
+    <h1>Uncorking the conversations behind <em>ONS 2026</em></h1>
+    <p class="lede">A brand, a website, a full set of event materials and a LinkedIn presence for Stavanger's new showcase and networking pavilion, delivered in about ten weeks.</p>
+    <dl class="facts">
+      <div><dt>Client</dt><dd>Company Outing, for ONS+ UnCorked</dd></div>
+      <div><dt>Location</dt><dd>Downtown Stavanger, Norway</dd></div>
+      <div><dt>Event</dt><dd>24 to 27 August 2026</dd></div>
+      <div><dt>Industry</dt><dd>Hospitality &amp; Events</dd></div>
+      <div><dt>Services</dt><dd>Brand, web, event design, LinkedIn, video</dd></div>
+      <div><dt>Role</dt><dd>Creative partner and Co-Create Partner</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- CHALLENGE -->
+<section id="challenge">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">The challenge</div>
+      <h2>A new pavilion, a bold name and <span class="hl">very little time</span></h2>
+    </div>
+    <div class="prose">
+      <p>ONS is one of the world's largest energy conferences, bringing an estimated 70,000+ visitors to Stavanger. The exhibition halls are busy and loud. Many of the conversations that actually move business forward happen later, downtown.</p>
+      <p>For 2026, ONS+ and a group of partners came together to build a <strong>co-created pavilion in downtown Stavanger</strong>: a place for energy leaders, investors, scaleups and international delegations to meet, showcase their work and do business. The partners voted on a name, and the pavilion became <strong>UnCorked</strong>.</p>
+      <p>The name created the first design challenge. "Uncorked" suggests popping a bottle of champagne, but Norwegian law strictly limits alcohol advertising. The identity had to capture the feeling of something being released, with <strong>no bottles, glasses or drinks</strong> anywhere in it.</p>
+      <ul class="checks">
+        <li>A "corporate edgy" look: energetic and fun, but still professional</li>
+        <li>A sense of hospitality, like walking into a good hotel lobby</li>
+        <li>A logo that stands alone and also sits alongside the ONS+ mark</li>
+        <li>A site live within days, with a programme linked to Luma</li>
+        <li>Everything ready for 24 August, while content was still changing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="dark" style="padding:clamp(56px,8vw,96px) 0">
+  <div class="wrap">
+    <p class="pull">Big conversations deserve <span>great meeting places.</span></p>
+  </div>
+</section>
+
+<!-- BRAND -->
+<section id="brand">
+  <div class="wrap">
+    <div class="chapter"><span class="n">1</span><div class="eyebrow" style="margin:0;flex:1">Brand identity</div></div>
+    <div class="split">
+      <h2>Bubbling, <span class="hl">not bottled</span></h2>
+      <div class="prose">
+        <p>We explored a wide range of logo directions, from bold block wordmarks to playful scripts and colour combinations. The client chose a clean, confident wordmark with sparkles rising out of it. It suggests energy being released without ever showing what is being opened.</p>
+        <p>The client also wanted to show what UnCorked was releasing: innovation, connections, technology, the future of energy. Packing all of that into the logo would have made it unreadable at small sizes, so we built it into a <strong>separate graphic system</strong> of sparkles, bursts and patterns that works across the website, social posts and print.</p>
+        <p>We tested four colour schemes directly on the website layout. The client chose <strong>deep purple and electric lime</strong>: energetic, still professional, and close to the colours already seen in the ONS event photography.</p>
+      </div>
+    </div>
+
+    <div class="palette">
+      <div class="swatch" style="background:#5D23BC;color:#fff"><b>Purple</b>#5D23BC</div>
+      <div class="swatch" style="background:#C6FE33;color:#120a24"><b>Lime</b>#C6FE33</div>
+      <div class="swatch" style="background:#2B1056;color:#fff"><b>Deep purple</b>#2B1056</div>
+      <div class="swatch" style="background:#120a24;color:#fff"><b>Ink</b>#120A24</div>
+    </div>
+    <div class="type">
+      <div><small>Headlines</small><span class="big" style="font-family:'Bricolage Grotesque';font-weight:800">Aa</span>Bricolage Grotesque</div>
+      <div><small>Body copy</small><span class="big" style="font-family:'Space Grotesk';font-weight:500">Aa</span>Space Grotesk</div>
+    </div>
+    <div class="slot wide" style="margin-top:12px">Logo exploration board<small>Image from Figma: logo concepts and the final lockup with ONS+</small></div>
+  </div>
+</section>
+
+<!-- WEBSITE -->
+<section id="website" class="grey">
+  <div class="wrap">
+    <div class="chapter"><span class="n">2</span><div class="eyebrow" style="margin:0;flex:1">Website</div></div>
+    <div class="split">
+      <div>
+        <h2>A one-page hub for the <span class="hl">whole week</span></h2>
+        <div class="prose" style="margin-top:24px">
+          <p>uncorked.no was designed as a single, scrollable page that answers the questions visitors actually have: what is this, what is on, how do I join, and where is it.</p>
+          <p><strong>Built for the client to run.</strong> We developed the site in WordPress with modular sections, so the client's team could edit copy live, swap images, show or hide sections and add programme items without going back to developers. Registrations stayed on Luma, which already handled approvals and waiting lists.</p>
+          <p><strong>Getting the word out early.</strong> Before the full site launched, we delivered 16:9 event cover images for LinkedIn and Facebook, so promotion could start while the programme was still being finalised.</p>
+        </div>
+        <ol class="structure" style="margin-top:32px">
+          <li><div><b>Hero</b><span>UnCorked and ONS+ lockup with "See the program" and "Become a partner"</span></div></li>
+          <li><div><b>In partnership with</b><span>The co-create partners, from the first scroll</span></div></li>
+          <li><div><b>The concept</b><span>Curated networking, inspiring conversations, showcase opportunities, dynamic programming</span></div></li>
+          <li><div><b>Programme</b><span>Day-by-day schedule, each session linking to Luma</span></div></li>
+          <li><div><b>Become a partner</b><span>Showcase, speak or sponsor, with a simple "Request a spot"</span></div></li>
+          <li><div><b>Golden Ticket</b><span>How invited guests register with their ticket</span></div></li>
+          <li><div><b>What to expect, news and location</b><span>Atmosphere, blog built in, and how to find the pavilion</span></div></li>
+        </ol>
+      </div>
+      <div class="slot page">Full landing page<small>Image from Figma or the live site: uncorked.no, desktop</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ON-SITE -->
+<section id="onsite" class="dark">
+  <div class="wrap">
+    <div class="chapter"><span class="n">3</span><div class="eyebrow" style="margin:0;flex:1">Event and print design</div></div>
+    <div class="split">
+      <h2>From the street to the <span class="hl">last drink voucher</span></h2>
+      <div class="prose">
+        <p>The pavilion needed to feel like UnCorked everywhere a guest looked. We designed the full set of physical materials in the same system, from large-format banners to the smallest handouts.</p>
+        <div class="badges" style="margin-top:28px">
+          <img src="assets/host-badge-1.jpg" alt="UnCorked 'Your Host' badge with sparkle pattern and QR code to the programme">
+          <img src="assets/host-badge-2.jpg" alt="UnCorked 'Host' badge with sparkle pattern and QR code to the programme">
+        </div>
+        <p style="margin-top:16px;font-size:14px">Partner and host badges, with a QR code straight to the programme.</p>
+      </div>
+    </div>
+
+    <div class="assets">
+      <article class="asset"><div class="media"><div class="slot">Wall of Fame banner</div></div><div class="cap"><h3>"Wall of Fame" tent banner</h3><p>A photo wall with every partner logo, laid out so logos stay visible when people stand in front of it. Set in lime green to work with the bohemian tent interior.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Entrance banner</div></div><div class="cap"><h3>Entrance banner</h3><p>Marking the pavilion at the entry point to the ONS+ downtown area.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Golden Ticket</div></div><div class="cap"><h3>Golden Ticket</h3><p>The premium invitation partners gave to selected guests, with a QR code to register. Explored in several styles, with and without QR codes.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Signage</div></div><div class="cap"><h3>Event signage</h3><p>Wayfinding and information signs around the pavilion.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Pamphlet</div></div><div class="cap"><h3>"Secret Networking Mission"</h3><p>A playful icebreaker pamphlet that gave guests a mission to start conversations.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Vouchers and menu</div></div><div class="cap"><h3>Drink vouchers and food menu</h3><p>Carried in the same identity, while respecting the rules on alcohol marketing.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Tent cards, flyers, roll-up</div></div><div class="cap"><h3>Tent cards, flyers and roll-up</h3><p>Table cards, A5 flyers, a roll-up banner and web banners.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Merch mockups</div></div><div class="cap"><h3>Brand extensions</h3><p>Stickers, tote bags, T-shirts and tape mockups showing how far the identity can travel.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- LINKEDIN -->
+<section id="linkedin">
+  <div class="wrap">
+    <div class="chapter"><span class="n">4</span><div class="eyebrow" style="margin:0;flex:1">LinkedIn</div></div>
+    <div class="split">
+      <h2>Building awareness <span class="hl">before the doors opened</span></h2>
+      <div class="prose">
+        <p>With about three weeks to go, we created the <strong>ONS+ UnCorked LinkedIn page</strong> and took over the content. The goal was to build anticipation, keep the audience informed about speakers and activities, and give partners content they would want to share.</p>
+        <p>Every post on the page was planned, designed and published by the Kilowott team.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>Page setup</h3><p>Profile, banner and voice, using the event's official naming and Norwegian sentence-case style.</p></div>
+      <div class="card"><h3>Content plan</h3><p>A weekly plan for the run-up to the event, focused on awareness and momentum.</p></div>
+      <div class="card"><h3>Creative templates</h3><p>Day posts, "Today's schedule", countdowns and photo posts in one consistent system.</p></div>
+      <div class="card"><h3>Speaker spotlights</h3><p>"Meet our expert" cards and slides introducing each speaker ahead of the event.</p></div>
+    </div>
+    <div class="assets" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">
+      <div class="slot" style="aspect-ratio:1;min-height:0">Day post</div>
+      <div class="slot" style="aspect-ratio:1;min-height:0">Today's schedule</div>
+      <div class="slot" style="aspect-ratio:1;min-height:0">Meet our expert</div>
+      <div class="slot" style="aspect-ratio:1;min-height:0">Team photo post</div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="purple">
+  <div class="wrap split">
+    <div>
+      <div class="chapter"><span class="n">5</span><div class="eyebrow" style="margin:0;flex:1">Venue video</div></div>
+      <h2>Setting the scene <span class="hl">on arrival</span></h2>
+      <div class="prose" style="margin-top:24px">
+        <p>We produced a video for screens at the pavilion. It introduces the UnCorked brand and concept and showcases the programme, sponsors and pavilion partners, so visitors understood the space, and the ecosystem around it, as they walked in.</p>
+      </div>
+    </div>
+    <div class="slot wide">Venue video<small>Embed or poster frame from ONS.mp4</small></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="dark">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">Timeline</div>
+      <h2>Brief to opening day in <span class="hl">about ten weeks</span></h2>
+    </div>
+    <ol class="timeline">
+      <li><time>15 June</time><span>Brief received and scope approved</span></li>
+      <li><time>16 June</time><span>Kickoff and creative direction agreed</span></li>
+      <li><time>19 June</time><span>Logo concepts presented, direction selected</span></li>
+      <li><time>22 June</time><span>Colour palette chosen, build begins, event cover images delivered</span></li>
+      <li><time>24 June</time><span>Website structure and hero finalised</span></li>
+      <li><time>July</time><span>Development, mobile refinement and content handover</span></li>
+      <li><time>Early August</time><span>Website live, LinkedIn page launched, physical assets designed</span></li>
+      <li><time>23 August</time><span>Venue video delivered</span></li>
+      <li><time>24 to 27 August</time><span>ONS+ UnCorked opens in downtown Stavanger</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="wrap">
+    <div class="eyebrow">Results</div>
+    <h2>What it <span class="hl">delivered</span></h2>
+    <div class="stats">
+      <div class="stat"><b>~10</b><span>weeks from first brief to opening day</span></div>
+      <div class="stat"><b>5</b><span>workstreams: brand, web, print, LinkedIn, video</span></div>
+      <div class="stat"><b class="tbc">TBC</b><span>LinkedIn followers, posts and impressions</span></div>
+      <div class="stat"><b class="tbc">TBC</b><span>Luma registrations across programme sessions</span></div>
+      <div class="stat"><b class="tbc">TBC</b><span>Partners featured on the Wall of Fame</span></div>
+      <div class="stat"><b class="tbc">TBC</b><span>Pavilion visitors during ONS week</span></div>
+    </div>
+    <p class="note">Figures marked TBC are being confirmed with the project team.</p>
+  </div>
+</section>
+
+<!-- QUOTE + CTA -->
+<section class="dark">
+  <div class="wrap">
+    <blockquote>"[Client quote to be added]"
+      <footer>[Name, title], Company Outing</footer>
+    </blockquote>
+    <p class="prose" style="margin-top:56px;max-width:60ch"><span style="color:var(--on-dark-muted)">From a name with a legal problem to a pavilion people wanted to be part of, UnCorked shows how a clear idea, a flexible system and a fast team can bring a new event brand to life in weeks rather than months.</span></p>
+    <a class="cta" href="https://www.kilowott.com/">Planning an event or pavilion? Let's talk</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Case study by Kilowott. ONS+ UnCorked 2026, Stavanger.</span>
+    <span>Live site: uncorked.no</span>
+  </div>
+</footer>
+
+</body>
+</html>
