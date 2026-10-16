@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ONS+ UnCorked Case Study | Kilowott</title>
 <meta name="description" content="How Kilowott built the brand, website, event materials and LinkedIn presence for ONS+ UnCorked, the showcase and networking pavilion at ONS 2026 in Stavanger.">
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('uc-intro'))document.documentElement.classList.add('intro-seen')}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 <style>
 :root{
   --purple:#5D23BC;
@@ -155,9 +156,120 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
 .cta:hover{background:var(--white)}
 .foot{background:var(--ink);color:var(--on-dark-muted);font-size:13px;padding:24px 0}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- Motion layer ---------- */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.eyebrow::after{transform:scaleX(var(--ln,1));transform-origin:left}
+.top{transition:transform .35s ease}
+.top.hide{transform:translateY(-100%)}
+.progress{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--lime);transform:scaleX(0);transform-origin:left}
+.top nav a.on{opacity:1;color:var(--lime)}
+
+/* Intro loader (only with JS, never with reduced motion, once per session) */
+.loader{display:none}
+.js .loader{display:block;position:fixed;inset:0;z-index:100;cursor:pointer;animation:loaderFailsafe .01s 5s forwards}
+.js.intro-seen .loader{display:none}
+.loader-panel{position:absolute;inset:0}
+.lp-lime{background:var(--lime)}
+.lp-ink{background:var(--ink);display:grid;place-items:center}
+.lp-ink img{width:min(360px,64vw)}
+.lp-ink p{position:absolute;bottom:28px;left:0;right:0;text-align:center;color:var(--on-dark-muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.burst{position:absolute;left:50%;top:50%;width:0;height:0}
+.burst i,.bubbles i,.star{display:block;background:var(--lime);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+.burst i{position:absolute;width:18px;height:18px;margin:-9px}
+@keyframes loaderFailsafe{to{visibility:hidden;opacity:0;pointer-events:none}}
+@media (prefers-reduced-motion:reduce){.js .loader{display:none}}
+
+/* Hero bubbles */
+.bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.bubbles i{position:absolute;bottom:-40px;opacity:.0}
+.bubbles i.dot{border-radius:50%;clip-path:none;background:transparent;border:1.5px solid rgba(198,254,51,.6)}
+
+/* Marquee */
+.marquee-sec{padding:clamp(44px,6vw,80px) 0;overflow:hidden}
+.marquee{display:flex;white-space:nowrap;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(40px,7vw,104px);line-height:1.1}
+.marquee + .marquee{margin-top:6px}
+.marquee-track{display:flex;flex:none}
+.marquee-group{display:flex;align-items:center;gap:.4em;padding-right:.4em;flex:none}
+.marquee .lime{color:var(--lime)}
+.marquee .outline{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.7)}
+.marquee .star{width:.5em;height:.5em;flex:none}
+.marquee.rev .star{background:var(--purple)}
+
+/* Chapters, swatches, type */
+.chapter .n{will-change:transform}
+.swatch{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.swatch:hover{transform:translateY(-8px)}
+.type .big{transition:font-weight .3s}
+
+/* Website: browser mock in sync with the structure list */
+.structure li{transition:background .3s,padding .3s}
+.structure li.on{background:rgba(93,35,188,.07);padding-left:12px}
+.structure li.on b{color:var(--purple)}
+.site-visual{position:sticky;top:90px}
+.browser{background:var(--ink);border-radius:12px;overflow:hidden;box-shadow:0 30px 60px rgba(43,16,86,.28)}
+.browser-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#1d1236}
+.browser-bar i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.22)}
+.browser-bar i:first-child{background:var(--lime)}
+.browser-bar span{margin-left:12px;flex:1;font-size:12px;color:var(--on-dark-muted);background:rgba(255,255,255,.07);padding:3px 12px;border-radius:99px}
+.screen{height:min(68vh,620px);overflow:hidden;position:relative}
+.screen-inner{padding:14px;display:grid;gap:12px}
+.w{border-radius:6px;padding:16px;background:rgba(255,255,255,.05);transition:box-shadow .35s,background .35s;display:grid;gap:10px}
+.w.on{box-shadow:inset 0 0 0 2px var(--lime);background:rgba(198,254,51,.07)}
+.w-line,.w-title{height:12px;border-radius:4px;background:rgba(255,255,255,.28)}
+.w-title{width:45%;height:16px;background:rgba(255,255,255,.4)}
+.w-line.short{width:60%}
+.w-hero{background:linear-gradient(160deg,#2B1056,#5D23BC);min-height:220px;align-content:end}
+.w-logo{width:55%;height:34px;border-radius:4px;background:var(--white);opacity:.9;margin-bottom:8px}
+.w-btns{display:flex;gap:8px;margin-top:6px}
+.w-btns b,.w-partner b{display:block;width:96px;height:28px;border-radius:4px;background:var(--lime)}
+.w-btns b.alt{background:transparent;box-shadow:inset 0 0 0 1.5px var(--white)}
+.w-partners{grid-template-columns:repeat(5,1fr)}
+.w-partners span{height:22px;border-radius:4px;background:rgba(255,255,255,.18)}
+.w-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.w-grid span{aspect-ratio:1;border-radius:4px;background:rgba(93,35,188,.7)}
+.w-row{height:30px;border-radius:4px;background:rgba(255,255,255,.1);border-left:3px solid var(--lime)}
+.w-partner,.w-partner.on{background:var(--lime)}
+.w-partner .w-line{background:rgba(18,10,36,.35)}
+.w-partner b{background:var(--ink)}
+.w-tix{height:90px;border-radius:6px;background:linear-gradient(120deg,#e9c76b,#b8913a 60%,#f2dc95);mask:radial-gradient(circle at 0 50%,transparent 12px,#000 13px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 12px,#000 13px) right/51% 100% no-repeat}
+.w-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.w-cols span{height:70px;border-radius:4px;background:rgba(255,255,255,.1)}
+.visual-cap{font-size:13px;color:var(--muted);margin-top:12px}
+@media (max-width:860px){.site-visual{position:relative;top:0}.screen{height:440px}}
+
+/* Assets, badges, cards */
+.asset{transition:border-color .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.asset:hover{border-color:var(--lime);transform:translateY(-6px)}
+.badges{perspective:900px}
+.badges img{transform-style:preserve-3d;will-change:transform}
+.card{transition:transform .35s,box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-6px);border-color:var(--purple);box-shadow:0 18px 36px rgba(93,35,188,.14)}
+
+/* Video */
+.play{width:64px;height:64px;border-radius:50%;background:var(--lime);position:relative;margin-bottom:14px}
+.play::before{content:"";position:absolute;left:26px;top:20px;border-left:16px solid var(--ink);border-top:12px solid transparent;border-bottom:12px solid transparent}
+.play::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--lime);animation:ring 2s ease-out infinite}
+@keyframes ring{to{transform:scale(1.9);opacity:0}}
+@media (prefers-reduced-motion:reduce){.play::after{animation:none}}
+
+/* Timeline progress */
+.timeline::after{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--lime);transform:scaleY(var(--p,1));transform-origin:top}
+.timeline li::before{z-index:1;transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.timeline li.reached::before{transform:scale(1.35) rotate(45deg)}
+
+/* CTA */
+.cta{will-change:transform}
+.cta .arr{display:inline-block;transition:transform .3s}
+.cta:hover .arr{transform:translateX(4px)}
 </style>
 </head>
 <body>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader-panel lp-lime"></div>
+  <div class="loader-panel lp-ink"><img src="assets/uncorked-logo.png" alt=""><div class="burst"></div><p>Click to skip</p></div>
+</div>
 
 <header class="top">
   <div class="wrap">
@@ -172,11 +284,13 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     </nav>
     <span class="draft">Draft for review</span>
   </div>
+  <div class="progress" aria-hidden="true"></div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="sparkles" aria-hidden="true"></div>
+  <div class="bubbles" aria-hidden="true"></div>
   <div class="wrap">
     <img class="hero-logo" src="assets/uncorked-logo.png" alt="UnCorked logo">
     <h1>Uncorking the conversations behind <em>ONS 2026</em></h1>
@@ -215,10 +329,10 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
 </section>
 
 <!-- STATEMENT -->
-<section class="dark" style="padding:clamp(56px,8vw,96px) 0">
-  <div class="wrap">
-    <p class="pull">Big conversations deserve <span>great meeting places.</span></p>
-  </div>
+<section class="dark marquee-sec">
+  <p class="sr-only">Big conversations deserve great meeting places.</p>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span>Big conversations</span><i class="star"></i><span class="lime">great meeting places</span><i class="star"></i><span class="outline">UnCorked</span><i class="star"></i></div><div class="marquee-group"><span>Big conversations</span><i class="star"></i><span class="lime">great meeting places</span><i class="star"></i><span class="outline">UnCorked</span><i class="star"></i></div></div></div>
+  <div class="marquee rev" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span class="outline">Curated networking</span><i class="star"></i><span>Inspiring conversations</span><i class="star"></i><span class="outline">Showcase</span><i class="star"></i><span>Dynamic programming</span><i class="star"></i></div><div class="marquee-group"><span class="outline">Curated networking</span><i class="star"></i><span>Inspiring conversations</span><i class="star"></i><span class="outline">Showcase</span><i class="star"></i><span>Dynamic programming</span><i class="star"></i></div></div></div>
 </section>
 
 <!-- BRAND -->
@@ -270,7 +384,22 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
           <li><div><b>What to expect, news and location</b><span>Atmosphere, blog built in, and how to find the pavilion</span></div></li>
         </ol>
       </div>
-      <div class="slot page">Full landing page<small>Image from Figma or the live site: uncorked.no, desktop</small></div>
+      <!-- Illustrative wireframe of the uncorked.no structure. A real screenshot can replace .screen-inner later and keep the same scroll sync. -->
+      <div class="site-visual">
+        <div class="browser" aria-hidden="true">
+          <div class="browser-bar"><i></i><i></i><i></i><span>uncorked.no</span></div>
+          <div class="screen"><div class="screen-inner">
+            <div class="w w-hero"><div class="w-logo"></div><div class="w-line"></div><div class="w-line short"></div><div class="w-btns"><b></b><b class="alt"></b></div></div>
+            <div class="w w-partners"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="w w-concept"><div class="w-title"></div><div class="w-grid"><span></span><span></span><span></span><span></span></div></div>
+            <div class="w w-program"><div class="w-title"></div><div class="w-row"></div><div class="w-row"></div><div class="w-row"></div><div class="w-row"></div></div>
+            <div class="w w-partner"><div class="w-line"></div><div class="w-line short"></div><b></b></div>
+            <div class="w w-ticket"><div class="w-title"></div><div class="w-tix"></div></div>
+            <div class="w w-foot"><div class="w-title"></div><div class="w-cols"><span></span><span></span></div></div>
+          </div></div>
+        </div>
+        <p class="visual-cap">The uncorked.no page, section by section.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -340,7 +469,7 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
         <p>We produced a video for screens at the pavilion. It introduces the UnCorked brand and concept and showcases the programme, sponsors and pavilion partners, so visitors understood the space, and the ecosystem around it, as they walked in.</p>
       </div>
     </div>
-    <div class="slot wide">Venue video<small>Embed or poster frame from ONS.mp4</small></div>
+    <div class="slot wide video-slot"><span class="play" aria-hidden="true"></span>Venue video<small>Embed or poster frame from ONS.mp4</small></div>
   </div>
 </section>
 
@@ -371,8 +500,8 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     <div class="eyebrow">Results</div>
     <h2>What it <span class="hl">delivered</span></h2>
     <div class="stats">
-      <div class="stat"><b>~10</b><span>weeks from first brief to opening day</span></div>
-      <div class="stat"><b>5</b><span>workstreams: brand, web, print, LinkedIn, video</span></div>
+      <div class="stat"><b data-count="10" data-prefix="~">~10</b><span>weeks from first brief to opening day</span></div>
+      <div class="stat"><b data-count="5">5</b><span>workstreams: brand, web, print, LinkedIn, video</span></div>
       <div class="stat"><b class="tbc">TBC</b><span>LinkedIn followers, posts and impressions</span></div>
       <div class="stat"><b class="tbc">TBC</b><span>Luma registrations across programme sessions</span></div>
       <div class="stat"><b class="tbc">TBC</b><span>Partners featured on the Wall of Fame</span></div>
@@ -388,8 +517,8 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     <blockquote>"[Client quote to be added]"
       <footer>[Name, title], Company Outing</footer>
     </blockquote>
-    <p class="prose" style="margin-top:56px;max-width:60ch"><span style="color:var(--on-dark-muted)">From a name with a legal problem to a pavilion people wanted to be part of, UnCorked shows how a clear idea, a flexible system and a fast team can bring a new event brand to life in weeks rather than months.</span></p>
-    <a class="cta" href="https://www.kilowott.com/">Planning an event or pavilion? Let's talk</a>
+    <p class="prose closing" style="margin-top:56px;max-width:60ch"><span style="color:var(--on-dark-muted)">From a name with a legal problem to a pavilion people wanted to be part of, UnCorked shows how a clear idea, a flexible system and a fast team can bring a new event brand to life in weeks rather than months.</span></p>
+    <a class="cta" href="https://www.kilowott.com/">Planning an event or pavilion? Let's talk <span class="arr" aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 
@@ -400,5 +529,9 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
   </div>
 </footer>
 
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>
