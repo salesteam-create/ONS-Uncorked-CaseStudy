@@ -54,7 +54,7 @@ section{padding:clamp(64px,10vw,120px) 0}
   -webkit-mask-image:linear-gradient(#000 20%,transparent);mask-image:linear-gradient(#000 20%,transparent)}
 .hero .wrap{position:relative}
 .hero-logo{width:min(520px,82vw);margin:56px 0 28px}
-.hero h1{font-size:clamp(40px,7vw,84px);font-weight:800;max-width:15ch}
+.hero h1{font-size:clamp(38px,6.4vw,80px);font-weight:800;max-width:17ch}
 .hero h1 em{font-style:normal;color:var(--lime)}
 .hero p.lede{font-size:clamp(18px,2.2vw,22px);color:var(--on-dark-muted);max-width:56ch;margin-top:24px}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);margin-top:56px}
@@ -81,6 +81,9 @@ h2 .hl{color:var(--purple)}
 .grey{background:var(--paper)}
 
 /* Pull quote */
+.client-pull{margin-top:clamp(40px,6vw,72px)}
+.client-pull blockquote.pull{font-weight:700;max-width:24ch}
+.client-pull figcaption{margin-top:16px;font-size:15px;color:var(--on-dark-muted)}
 .pull{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.6vw,40px);line-height:1.15;max-width:22ch}
 .pull span{color:var(--lime)}
 
@@ -293,8 +296,8 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
   <div class="bubbles" aria-hidden="true"></div>
   <div class="wrap">
     <img class="hero-logo" src="assets/uncorked-logo.png" alt="UnCorked logo">
-    <h1>Uncorking the conversations behind <em>ONS 2026</em></h1>
-    <p class="lede">A brand, a website, a full set of event materials and a LinkedIn presence for Stavanger's new showcase and networking pavilion, delivered in about ten weeks.</p>
+    <h1>How do you uncork something <em>you're not allowed to show?</em></h1>
+    <p class="lede">A brand, a website, a full set of event materials and a LinkedIn presence for Stavanger's new showcase and networking pavilion, built in about ten weeks from a name and a legal problem.</p>
     <dl class="facts">
       <div><dt>Client</dt><dd>Company Outing, for ONS+ UnCorked</dd></div>
       <div><dt>Location</dt><dd>Downtown Stavanger, Norway</dd></div>
@@ -314,15 +317,16 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
       <h2>A new pavilion, a bold name and <span class="hl">very little time</span></h2>
     </div>
     <div class="prose">
-      <p>ONS is one of the world's largest energy conferences, bringing an estimated 70,000+ visitors to Stavanger. The exhibition halls are busy and loud. Many of the conversations that actually move business forward happen later, downtown.</p>
-      <p>For 2026, ONS+ and a group of partners came together to build a <strong>co-created pavilion in downtown Stavanger</strong>: a place for energy leaders, investors, scaleups and international delegations to meet, showcase their work and do business. The partners voted on a name, and the pavilion became <strong>UnCorked</strong>.</p>
-      <p>The name created the first design challenge. "Uncorked" suggests popping a bottle of champagne, but Norwegian law strictly limits alcohol advertising. The identity had to capture the feeling of something being released, with <strong>no bottles, glasses or drinks</strong> anywhere in it.</p>
+      <p>Every August, ONS brings around [70,000, confirm on ons.no] energy professionals to Stavanger. The exhibition halls are busy, loud and overwhelming. Many of the conversations that actually move business forward happen later, downtown.</p>
+      <p>For 2026, Company Outing brought together Innovation Norway, Export Finance Norway and a group of technology and property partners to build <strong>one shared pavilion</strong> for exactly those conversations: a place to meet, showcase and do business. The partners voted on a name, and the pavilion became <strong>UnCorked</strong>.</p>
+      <p>That gave us our first problem. "Uncorked" means popping a bottle, and in Norway, alcohol advertising is strictly limited. The brief was clear: <strong>no bottles, no glasses, no drinks</strong>. What gets uncorked here is innovation, connections and new technology.</p>
+      <p>The client summed up the feel in two words: <strong>corporate edgy</strong>. Professional enough for government partners, fun enough to stand out from the grey of a typical conference, and as welcoming as walking into a good hotel lobby.</p>
       <ul class="checks">
-        <li>A "corporate edgy" look: energetic and fun, but still professional</li>
-        <li>A sense of hospitality, like walking into a good hotel lobby</li>
-        <li>A logo that stands alone and also sits alongside the ONS+ mark</li>
-        <li>A site live within days, with a programme linked to Luma</li>
-        <li>Everything ready for 24 August, while content was still changing</li>
+        <li>An identity that suggests release and energy, without showing what is being opened</li>
+        <li>A "corporate edgy" look: fun and energetic, but still professional</li>
+        <li>A logo that stands alone, and also sits alongside the ONS+ mark</li>
+        <li>A website the client's own team could update as the programme kept changing</li>
+        <li>Everything ready for 24 August, with content still being decided along the way</li>
       </ul>
     </div>
   </div>
@@ -333,6 +337,13 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
   <p class="sr-only">Big conversations deserve great meeting places.</p>
   <div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span>Big conversations</span><i class="star"></i><span class="lime">great meeting places</span><i class="star"></i><span class="outline">UnCorked</span><i class="star"></i></div><div class="marquee-group"><span>Big conversations</span><i class="star"></i><span class="lime">great meeting places</span><i class="star"></i><span class="outline">UnCorked</span><i class="star"></i></div></div></div>
   <div class="marquee rev" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span class="outline">Curated networking</span><i class="star"></i><span>Inspiring conversations</span><i class="star"></i><span class="outline">Showcase</span><i class="star"></i><span>Dynamic programming</span><i class="star"></i></div><div class="marquee-group"><span class="outline">Curated networking</span><i class="star"></i><span>Inspiring conversations</span><i class="star"></i><span class="outline">Showcase</span><i class="star"></i><span>Dynamic programming</span><i class="star"></i></div></div></div>
+  <div class="wrap">
+    <!-- Quote attribution needs the client's approval before publishing. -->
+    <figure class="client-pull">
+      <blockquote class="pull">"Make it fresh. Make it fun. <span>But still on the edge."</span></blockquote>
+      <figcaption>Rudi Clausen, Company Outing</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- BRAND -->
@@ -342,9 +353,9 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     <div class="split">
       <h2>Bubbling, <span class="hl">not bottled</span></h2>
       <div class="prose">
-        <p>We explored a wide range of logo directions, from bold block wordmarks to playful scripts and colour combinations. The client chose a clean, confident wordmark with sparkles rising out of it. It suggests energy being released without ever showing what is being opened.</p>
-        <p>The client also wanted to show what UnCorked was releasing: innovation, connections, technology, the future of energy. Packing all of that into the logo would have made it unreadable at small sizes, so we built it into a <strong>separate graphic system</strong> of sparkles, bursts and patterns that works across the website, social posts and print.</p>
-        <p>We tested four colour schemes directly on the website layout. The client chose <strong>deep purple and electric lime</strong>: energetic, still professional, and close to the colours already seen in the ONS event photography.</p>
+        <p>Three days after kickoff, we presented a wide range of logo directions, from bold block wordmarks to playful scripts and colour combinations. The client chose a clean, confident wordmark with sparkles rising out of it. It suggests energy being released without ever showing what is being opened.</p>
+        <p>The client also had a bigger idea: rockets, wind turbines and technology bursting out of the logo, because that is exactly what UnCorked releases. We advised against putting them in the logo itself. A logo packed with icons becomes unreadable on a badge or a phone screen. Instead, we turned the idea into a <strong>separate graphic system</strong> of sparkles, bursts and patterns that carries the story across the website, social posts and print. The client got everything he asked for, in a form that works at every size.</p>
+        <p>We tested four colour schemes directly on the website layout. The client chose <strong>deep purple and electric lime</strong>: energetic, high in contrast and still professional.</p>
       </div>
     </div>
 
@@ -358,7 +369,7 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
       <div><small>Headlines</small><span class="big" style="font-family:'Bricolage Grotesque';font-weight:800">Aa</span>Bricolage Grotesque</div>
       <div><small>Body copy</small><span class="big" style="font-family:'Space Grotesk';font-weight:500">Aa</span>Space Grotesk</div>
     </div>
-    <div class="slot wide" style="margin-top:12px">Logo exploration board<small>Image from Figma: logo concepts and the final lockup with ONS+</small></div>
+    <div class="slot wide" style="margin-top:12px">Logo exploration board<small>From first concepts to the final lockup with ONS+.</small></div>
   </div>
 </section>
 
@@ -368,20 +379,21 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     <div class="chapter"><span class="n">2</span><div class="eyebrow" style="margin:0;flex:1">Website</div></div>
     <div class="split">
       <div>
-        <h2>A one-page hub for the <span class="hl">whole week</span></h2>
+        <h2>A one-page hub the <span class="hl">client could run</span></h2>
         <div class="prose" style="margin-top:24px">
           <p>uncorked.no was designed as a single, scrollable page that answers the questions visitors actually have: what is this, what is on, how do I join, and where is it.</p>
-          <p><strong>Built for the client to run.</strong> We developed the site in WordPress with modular sections, so the client's team could edit copy live, swap images, show or hide sections and add programme items without going back to developers. Registrations stayed on Luma, which already handled approvals and waiting lists.</p>
-          <p><strong>Getting the word out early.</strong> Before the full site launched, we delivered 16:9 event cover images for LinkedIn and Facebook, so promotion could start while the programme was still being finalised.</p>
+          <p><strong>Built for the client to run.</strong> When the client approved the project, he had one condition: his team had to manage the content themselves, because the programme would keep changing until the final week. We built the site in WordPress with modular sections the team could edit, hide and reorder without calling a developer. The programme ran as an embedded Luma calendar, which already handled registrations and waiting lists.</p>
+          <p><strong>Simple where it counts.</strong> Partner enquiries became a single "Request a spot" button that opens a ready-addressed email for showcase, speaking, sponsorship or partnership requests, with no form to build or maintain. The news section was built at launch but kept hidden until there was something worth publishing.</p>
+          <p><strong>Getting the word out early.</strong> Promotion didn't wait for the site. In the first week, we delivered event cover images for LinkedIn and Facebook, so the client could start promoting while the programme was still being written.</p>
         </div>
         <ol class="structure" style="margin-top:32px">
-          <li><div><b>Hero</b><span>UnCorked and ONS+ lockup with "See the program" and "Become a partner"</span></div></li>
+          <li><div><b>Hero</b><span>UnCorked and ONS+ lockup, with "See the program" as the main action and "Become a partner" as the second</span></div></li>
           <li><div><b>In partnership with</b><span>The co-create partners, from the first scroll</span></div></li>
-          <li><div><b>The concept</b><span>Curated networking, inspiring conversations, showcase opportunities, dynamic programming</span></div></li>
-          <li><div><b>Programme</b><span>Day-by-day schedule, each session linking to Luma</span></div></li>
-          <li><div><b>Become a partner</b><span>Showcase, speak or sponsor, with a simple "Request a spot"</span></div></li>
-          <li><div><b>Golden Ticket</b><span>How invited guests register with their ticket</span></div></li>
-          <li><div><b>What to expect, news and location</b><span>Atmosphere, blog built in, and how to find the pavilion</span></div></li>
+          <li><div><b>The concept</b><span>Curated networking, inspiring conversations, showcase opportunities and dynamic programming</span></div></li>
+          <li><div><b>Programme</b><span>The full schedule, with each session linking to Luma</span></div></li>
+          <li><div><b>Become a partner</b><span>Showcase, speak or sponsor, with one "Request a spot" button</span></div></li>
+          <li><div><b>Golden Ticket</b><span>What invited guests do next: check the programme and request to join</span></div></li>
+          <li><div><b>What to expect, news and location</b><span>The atmosphere, a built-in blog, and where to find the pavilion</span></div></li>
         </ol>
       </div>
       <!-- Illustrative wireframe of the uncorked.no structure. A real screenshot can replace .screen-inner later and keep the same scroll sync. -->
@@ -411,7 +423,8 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     <div class="split">
       <h2>From the street to the <span class="hl">last drink voucher</span></h2>
       <div class="prose">
-        <p>The pavilion needed to feel like UnCorked everywhere a guest looked. We designed the full set of physical materials in the same system, from large-format banners to the smallest handouts.</p>
+        <p>With three weeks to go, the project moved from screens to the street. We set up a <strong>dedicated in-house design team</strong> for the final stretch, because events always bring last-minute changes and there was no time to wait for them.</p>
+        <p>Our rule for everything printed was simple: if it doesn't look real in print, it doesn't go out. Every piece used the same system, from large-format banners to the smallest handout.</p>
         <div class="badges" style="margin-top:28px">
           <img src="assets/host-badge-1.jpg" alt="UnCorked 'Your Host' badge with sparkle pattern and QR code to the programme">
           <img src="assets/host-badge-2.jpg" alt="UnCorked 'Host' badge with sparkle pattern and QR code to the programme">
@@ -421,12 +434,12 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     </div>
 
     <div class="assets">
-      <article class="asset"><div class="media"><div class="slot">Wall of Fame banner</div></div><div class="cap"><h3>"Wall of Fame" tent banner</h3><p>A photo wall with every partner logo, laid out so logos stay visible when people stand in front of it. Set in lime green to work with the bohemian tent interior.</p></div></article>
-      <article class="asset"><div class="media"><div class="slot">Entrance banner</div></div><div class="cap"><h3>Entrance banner</h3><p>Marking the pavilion at the entry point to the ONS+ downtown area.</p></div></article>
-      <article class="asset"><div class="media"><div class="slot">Golden Ticket</div></div><div class="cap"><h3>Golden Ticket</h3><p>The premium invitation partners gave to selected guests, with a QR code to register. Explored in several styles, with and without QR codes.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Wall of Fame banner</div></div><div class="cap"><h3>"Wall of Fame" tent banner</h3><p>A photo wall with every partner logo, laid out so the logos stay visible when people stand in front of it, which is the whole point of a photo wall. Set in lime green to stand out against the bohemian tent interior.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Entrance banner</div></div><div class="cap"><h3>Entrance banner</h3><p>Marking the pavilion as the first thing visitors reach at the entry to the ONS+ downtown area.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Golden Ticket</div></div><div class="cap"><h3>Golden Ticket</h3><p>The pavilion's most exclusive invitation, given by partners to selected guests. Our first version didn't pass our own review: the words "Golden Ticket" were louder than the brand, and the gold looked digital. We reworked it so UnCorked leads, and designed it for real gold foil.</p></div></article>
       <article class="asset"><div class="media"><div class="slot">Signage</div></div><div class="cap"><h3>Event signage</h3><p>Wayfinding and information signs around the pavilion.</p></div></article>
-      <article class="asset"><div class="media"><div class="slot">Pamphlet</div></div><div class="cap"><h3>"Secret Networking Mission"</h3><p>A playful icebreaker pamphlet that gave guests a mission to start conversations.</p></div></article>
-      <article class="asset"><div class="media"><div class="slot">Vouchers and menu</div></div><div class="cap"><h3>Drink vouchers and food menu</h3><p>Carried in the same identity, while respecting the rules on alcohol marketing.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Pamphlet</div></div><div class="cap"><h3>"Secret Networking Mission"</h3><p>A playful pamphlet that gave every guest a mission, and a reason to start talking to someone new.</p></div></article>
+      <article class="asset"><div class="media"><div class="slot">Vouchers and menu</div></div><div class="cap"><h3>Drink vouchers and food menu</h3><p>Carried in the same identity, while keeping to the rules on alcohol marketing.</p></div></article>
       <article class="asset"><div class="media"><div class="slot">Tent cards, flyers, roll-up</div></div><div class="cap"><h3>Tent cards, flyers and roll-up</h3><p>Table cards, A5 flyers, a roll-up banner and web banners.</p></div></article>
       <article class="asset"><div class="media"><div class="slot">Merch mockups</div></div><div class="cap"><h3>Brand extensions</h3><p>Stickers, tote bags, T-shirts and tape mockups showing how far the identity can travel.</p></div></article>
     </div>
@@ -440,12 +453,12 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     <div class="split">
       <h2>Building awareness <span class="hl">before the doors opened</span></h2>
       <div class="prose">
-        <p>With about three weeks to go, we created the <strong>ONS+ UnCorked LinkedIn page</strong> and took over the content. The goal was to build anticipation, keep the audience informed about speakers and activities, and give partners content they would want to share.</p>
+        <p>At the same time, we created the <strong>ONS+ UnCorked LinkedIn page</strong> and took over the content. The aim was to build anticipation, keep people informed about speakers and activities, and give partners posts they would want to share.</p>
         <p>Every post on the page was planned, designed and published by the Kilowott team.</p>
       </div>
     </div>
     <div class="cards">
-      <div class="card"><h3>Page setup</h3><p>Profile, banner and voice, using the event's official naming and Norwegian sentence-case style.</p></div>
+      <div class="card"><h3>Page setup</h3><p>Profile, banner and voice, with consistent naming and sentence-case style across every post.</p></div>
       <div class="card"><h3>Content plan</h3><p>A weekly plan for the run-up to the event, focused on awareness and momentum.</p></div>
       <div class="card"><h3>Creative templates</h3><p>Day posts, "Today's schedule", countdowns and photo posts in one consistent system.</p></div>
       <div class="card"><h3>Speaker spotlights</h3><p>"Meet our expert" cards and slides introducing each speaker ahead of the event.</p></div>
@@ -466,7 +479,7 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
       <div class="chapter"><span class="n">5</span><div class="eyebrow" style="margin:0;flex:1">Venue video</div></div>
       <h2>Setting the scene <span class="hl">on arrival</span></h2>
       <div class="prose" style="margin-top:24px">
-        <p>We produced a video for screens at the pavilion. It introduces the UnCorked brand and concept and showcases the programme, sponsors and pavilion partners, so visitors understood the space, and the ecosystem around it, as they walked in.</p>
+        <p>For opening day, we produced a video for the screens at the pavilion. It introduces the UnCorked brand and concept and showcases the programme, sponsors and pavilion partners, so every visitor understood the space, and the network around it, as they walked in.</p>
       </div>
     </div>
     <div class="slot wide video-slot"><span class="play" aria-hidden="true"></span>Venue video<small>Embed or poster frame from ONS.mp4</small></div>
@@ -484,11 +497,13 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
       <li><time>15 June</time><span>Brief received and scope approved</span></li>
       <li><time>16 June</time><span>Kickoff and creative direction agreed</span></li>
       <li><time>19 June</time><span>Logo concepts presented, direction selected</span></li>
-      <li><time>22 June</time><span>Colour palette chosen, build begins, event cover images delivered</span></li>
-      <li><time>24 June</time><span>Website structure and hero finalised</span></li>
+      <li><time>22 June</time><span>Colour palette chosen, build begins</span></li>
+      <li><time>24 June</time><span>Website structure finalised, event cover images delivered</span></li>
       <li><time>July</time><span>Development, mobile refinement and content handover</span></li>
-      <li><time>Early August</time><span>Website live, LinkedIn page launched, physical assets designed</span></li>
-      <li><time>23 August</time><span>Venue video delivered</span></li>
+      <li><time>31 July</time><span>Final design review with the client</span></li>
+      <li><time>4 August</time><span>In-house event design team set up, LinkedIn page launched</span></li>
+      <li><time>7 August</time><span>uncorked.no goes live</span></li>
+      <li><time>[23 August, confirm]</time><span>Venue video delivered</span></li>
       <li><time>24 to 27 August</time><span>ONS+ UnCorked opens in downtown Stavanger</span></li>
     </ol>
   </div>
@@ -502,22 +517,22 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
     <div class="stats">
       <div class="stat"><b data-count="10" data-prefix="~">~10</b><span>weeks from first brief to opening day</span></div>
       <div class="stat"><b data-count="5">5</b><span>workstreams: brand, web, print, LinkedIn, video</span></div>
-      <div class="stat"><b class="tbc">TBC</b><span>LinkedIn followers, posts and impressions</span></div>
-      <div class="stat"><b class="tbc">TBC</b><span>Luma registrations across programme sessions</span></div>
-      <div class="stat"><b class="tbc">TBC</b><span>Partners featured on the Wall of Fame</span></div>
-      <div class="stat"><b class="tbc">TBC</b><span>Pavilion visitors during ONS week</span></div>
+      <div class="stat"><b data-count="3">3</b><span>days from kickoff to first logo concepts</span></div>
+      <!-- Keep the boxes below only once the figures are confirmed; delete any that stay empty. -->
+      <div class="stat"><b class="tbc">[X]</b><span>LinkedIn impressions across [X] posts</span></div>
+      <div class="stat"><b class="tbc">[X]</b><span>Luma registrations across the programme</span></div>
+      <div class="stat"><b class="tbc">[X]</b><span>partners featured on the Wall of Fame</span></div>
     </div>
-    <p class="note">Figures marked TBC are being confirmed with the project team.</p>
   </div>
 </section>
 
 <!-- QUOTE + CTA -->
 <section class="dark">
   <div class="wrap">
-    <blockquote>"[Client quote to be added]"
-      <footer>[Name, title], Company Outing</footer>
+    <blockquote>"[Quote from Rudi]"
+      <footer>Rudi Clausen, [title], Company Outing</footer>
     </blockquote>
-    <p class="prose closing" style="margin-top:56px;max-width:60ch"><span style="color:var(--on-dark-muted)">From a name with a legal problem to a pavilion people wanted to be part of, UnCorked shows how a clear idea, a flexible system and a fast team can bring a new event brand to life in weeks rather than months.</span></p>
+    <p class="prose closing" style="margin-top:56px;max-width:60ch"><span style="color:var(--on-dark-muted)">Kilowott was also one of the pavilion's Co-Create Partners, so our name was on that wall too. From a name with a legal problem to a pavilion people wanted to be part of, UnCorked shows what a clear idea, a flexible system and a fast team can do in weeks rather than months.</span></p>
     <a class="cta" href="https://www.kilowott.com/">Planning an event or pavilion? Let's talk <span class="arr" aria-hidden="true">&rarr;</span></a>
   </div>
 </section>

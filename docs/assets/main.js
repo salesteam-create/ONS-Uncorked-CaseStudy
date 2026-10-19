@@ -239,8 +239,7 @@
 
     /* ---------- Quote and closing line read in ---------- */
     if (hasSplit) {
-      ['blockquote', '.closing span'].forEach(function (sel) {
-        var t = $(sel); if (!t) return;
+      $$('blockquote, .closing span').forEach(function (t) {
         SplitText.create(t, { type: 'words', autoSplit: true, onSplit: function (self) {
           return gsap.from(self.words, { opacity: .15, stagger: .05, ease: 'none', scrollTrigger: { trigger: t, start: 'top 85%', end: 'bottom 55%', scrub: true } });
         } });
