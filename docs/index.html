@@ -265,6 +265,15 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
 .cta{will-change:transform}
 .cta .arr{display:inline-block;transition:transform .3s}
 .cta:hover .arr{transform:translateX(4px)}
+
+/* Copy version switch */
+.top-right{display:flex;align-items:center;gap:12px}
+.ver{display:inline-flex;background:rgba(255,255,255,.1);border-radius:99px;padding:3px;font-size:12px;font-weight:700}
+.ver a{text-decoration:none;padding:4px 12px;border-radius:99px;color:var(--on-dark-muted);white-space:nowrap}
+.ver a:hover{color:var(--white)}
+.ver a[aria-current]{background:var(--white);color:var(--ink)}
+.draft .short{display:none}
+@media (max-width:520px){.draft .long{display:none}.draft .short{display:inline}.top .wrap{gap:10px}}
 </style>
 </head>
 <body>
@@ -285,7 +294,10 @@ blockquote footer{font-family:'Space Grotesk';font-size:15px;font-weight:500;mar
       <a href="#linkedin">LinkedIn</a>
       <a href="#results">Results</a>
     </nav>
-    <span class="draft">Draft for review</span>
+    <div class="top-right">
+    <div class="ver" role="group" aria-label="Copy version"><a href="index.html" aria-current="page">New copy</a><a href="previous.html">Previous</a></div>
+    <span class="draft"><span class="long">Draft for review</span><span class="short">Draft</span></span>
+    </div>
   </div>
   <div class="progress" aria-hidden="true"></div>
 </header>

@@ -32,6 +32,14 @@
     });
   });
 
+  /* Version switch keeps the reader on the same section */
+  $$('.ver a:not([aria-current])').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var on = $('.top nav a.on');
+      if (on) a.href = a.getAttribute('href').split('#')[0] + on.getAttribute('href');
+    });
+  });
+
   var mm = gsap.matchMedia();
 
   mm.add({
